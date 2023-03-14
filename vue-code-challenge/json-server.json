@@ -1,0 +1,5 @@
+{
+  "port": 8888,
+  "routes": "./src/api/routes.json",
+  "watch": "./src/api/db.json"
+}

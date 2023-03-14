@@ -1,0 +1,222 @@
+{
+  "index": [
+    {
+      "id": 1,
+      "style_id": "ABC9",
+      "listing_discount": {
+        "ref": null,
+        "type": null,
+        "value": null
+      },
+      "bucket_discount": {
+        "type": "%",
+        "ref": "MSRP",
+        "value": 15
+      }
+    },
+    {
+      "id": 2,
+      "style_id": "ABC10",
+      "listing_discount": {
+        "ref": null,
+        "type": null,
+        "value": null
+      },
+      "bucket_discount": {
+        "type": "%",
+        "ref": "Invoice",
+        "value": 14
+      }
+    },
+    [
+      {
+        "id": 1602615480353,
+        "style_id": "ABC1",
+        "listing_discount": {
+          "ref": null,
+          "type": null,
+          "value": null
+        },
+        "bucket_discount": {
+          "type": "%",
+          "ref": "MSRP",
+          "value": 12
+        }
+      },
+      {
+        "id": 1602615482434,
+        "style_id": "ABC2",
+        "listing_discount": {
+          "ref": null,
+          "type": null,
+          "value": null
+        },
+        "bucket_discount": {
+          "type": "%",
+          "ref": "MSRP",
+          "value": 12
+        }
+      }
+    ],
+    {
+      "id": 1602615600653,
+      "style_id": "ABC1",
+      "listing_discount": {
+        "ref": null,
+        "type": null,
+        "value": null
+      },
+      "bucket_discount": {
+        "type": "%",
+        "ref": "MSRP",
+        "value": 1
+      }
+    },
+    {
+      "id": 1602615603261,
+      "style_id": "ABC2",
+      "listing_discount": {
+        "ref": null,
+        "type": null,
+        "value": null
+      },
+      "bucket_discount": {
+        "type": "%",
+        "ref": "MSRP",
+        "value": 12
+      }
+    },
+    {
+      "id": 1602615604840,
+      "style_id": "ABC3",
+      "listing_discount": {
+        "ref": null,
+        "type": null,
+        "value": null
+      },
+      "bucket_discount": {
+        "type": "%",
+        "ref": "MSRP",
+        "value": 3
+      }
+    },
+    {
+      "id": 1623702613079,
+      "style_id": "ABC4",
+      "listing_discount": {
+        "ref": null,
+        "type": null,
+        "value": null
+      },
+      "bucket_discount": {
+        "type": "$",
+        "ref": "MSRP",
+        "value": 222
+      }
+    }
+  ],
+  "options": [
+    {
+      "year": 2014,
+      "model": "Camry",
+      "trims": [
+        {
+          "name": "SE",
+          "msrp": "9500",
+          "style_id": "ABC9",
+          "invoice": "9501"
+        },
+        {
+          "name": "LE",
+          "msrp": "8500",
+          "style_id": "ABC10",
+          "invoice": "8501"
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "model": "Corolla",
+      "trims": [
+        {
+          "name": "SE",
+          "msrp": "10000",
+          "style_id": "ABC1",
+          "invoice": "10001"
+        },
+        {
+          "name": "LE",
+          "msrp": "11000",
+          "style_id": "ABC2",
+          "invoice": "11001"
+        },
+        {
+          "name": "LC",
+          "msrp": "11000",
+          "style_id": "ABC3",
+          "invoice": "11001"
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "model": "Corolla",
+      "trims": [
+        {
+          "name": "SE",
+          "msrp": "10000",
+          "style_id": "ABC6",
+          "invoice": "9001"
+        },
+        {
+          "name": "LE",
+          "msrp": "11000",
+          "style_id": "ABC7",
+          "invoice": "11001"
+        },
+        {
+          "name": "LC",
+          "msrp": "11000",
+          "style_id": "ABC8",
+          "invoice": "11001"
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "model": "Camry",
+      "trims": [
+        {
+          "name": "SE",
+          "msrp": "10500",
+          "style_id": "ABC5",
+          "invoice": "10501"
+        },
+        {
+          "name": "LE",
+          "msrp": "11500",
+          "style_id": "ABC4",
+          "invoice": "11501"
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "model": "Rav4",
+      "trims": [
+        {
+          "name": "LX",
+          "msrp": "20000",
+          "style_id": "ABC12",
+          "invoice": "19000"
+        },
+        {
+          "name": "LE",
+          "msrp": "19500",
+          "style_id": "ABC13",
+          "invoice": "19250"
+        }
+      ]
+    }
+  ]
+}
