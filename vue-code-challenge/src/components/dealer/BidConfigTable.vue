@@ -6,7 +6,9 @@
           <th colspan="4" class="px-3 text-white font-weight-normal">
             Vehicle
           </th>
-          <!--<th colspan="3" class="px-3 text-white font-weight-normal">Advertised Price</th>-->
+          <th colspan="3" class="px-3 text-white font-weight-normal">
+            Advertised Price
+          </th>
           <th colspan="3" class="px-3 text-white font-weight-normal">
             Buckets Price
           </th>
@@ -30,9 +32,9 @@
           </th>
           <th class="text-center">MSRP</th>
           <th class="text-center">Invoice</th>
-          <!--<th class="text-center">Discount</th>-->
-          <!--<th class="text-center">Discount&nbsp;Type</th>-->
-          <!--<th class="text-center">MAAP</th>-->
+          <th class="text-center">Discount</th>
+          <th class="text-center">Discount&nbsp;Type</th>
+          <th class="text-center">MAAP</th>
           <th class="text-center">Discount</th>
           <th class="text-center">Discount&nbsp;Type</th>
           <th class="text-center">Final Price</th>
