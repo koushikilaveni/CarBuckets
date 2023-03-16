@@ -19,7 +19,15 @@
     <td></td>
     <td>
       <label>
+        <percent-input
+          v-if="isPercentDiscount(listing_discount_type)"
+          class="model-bucket-discount-value form-control form-control-sm"
+          v-model="listing_discount"
+          :placeholder="listing_placeholder"
+          :disabled="disabled"
+        />
         <currency-input
+          v-else
           v-model.number="listing_discount"
           v-bind="{
             currency: 'USD',
@@ -53,7 +61,15 @@
     <td></td>
     <td>
       <label>
+        <percent-input
+          v-if="isPercentDiscount(bucket_discount_type)"
+          class="model-bucket-discount-value form-control form-control-sm"
+          v-model.number="bucket_discount"
+          :placeholder="bucket_placeholder"
+          :disabled="disabled"
+        />
         <currency-input
+          v-else
           v-model.number="bucket_discount"
           v-bind="{
             currency: 'USD',
@@ -98,12 +114,14 @@
   import { exists } from '@/utilities'
   // Components
   // import BidConfigTableTrim from '@/components/dealer/BidConfigTableTrim'
+  import PercentInput from '@/components/PercentInput'
 
   // Config
   const { mapActions, mapGetters } = createNamespacedHelpers('dealer')
 
   export default {
     name: 'BidConfigTableModel',
+    components: { PercentInput },
     props: {
       toggled: { type: Boolean, default: false },
       option: { default: [] },
@@ -119,7 +137,12 @@
         bucket_discount_type_value: '% Off MSRP'
       }
     },
-    inject: ['buildConfigObject', 'computeMinPrice', 'discountValuesConst'],
+    inject: [
+      'buildConfigObject',
+      'computeMinPrice',
+      'discountValuesConst',
+      'isPercentDiscount'
+    ],
     computed: {
       ...mapGetters([get.BID_CONFIG_BY_STYLE_ID]),
       componentId() {
@@ -166,6 +189,7 @@
           return this.getDiscount('listing_discount')
         },
         set: function (newValue) {
+          console.log(newValue)
           this.setValue(
             'listing_discount',
             this.listing_discount_type,

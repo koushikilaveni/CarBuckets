@@ -6,26 +6,26 @@
       "listing_discount": {
         "type": "$",
         "ref": "Invoice",
-        "value": 1
+        "value": 2
       },
       "bucket_discount": {
         "type": "%",
-        "ref": "MSRP",
-        "value": 15
+        "ref": "Invoice",
+        "value": 46
       }
     },
     {
       "id": 2,
       "style_id": "ABC10",
       "listing_discount": {
-        "type": "%",
-        "ref": "MSRP",
-        "value": 1
+        "type": "$",
+        "ref": "Invoice",
+        "value": 2
       },
       "bucket_discount": {
-        "type": "%",
+        "type": "$",
         "ref": "Invoice",
-        "value": 14
+        "value": 45
       }
     },
     [

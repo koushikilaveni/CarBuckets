@@ -123,6 +123,9 @@
           PERCENT_MSRP: '% Off MSRP',
           DOLLARS_MSRP: '$ Off MSRP'
         },
+        isPercentDiscount(discount) {
+          return ['% Off Invoice', '% Off MSRP'].includes(discount)
+        },
         buildConfigObject(name, varType = null, value = null) {
           const type = (varType || this[name + '_type']).split(' ')[0]
           const ref = (varType || this[name + '_type']).split(' ')[2]

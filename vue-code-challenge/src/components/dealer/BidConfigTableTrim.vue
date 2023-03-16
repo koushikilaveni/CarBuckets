@@ -6,7 +6,15 @@
     <td class="align-middle">{{ this.invoice_display }}</td>
     <td>
       <label>
+        <percent-input
+          v-if="isPercentDiscount(listing_discount_type)"
+          v-model="listing_discount"
+          class="trim-bucket-discount-value form-control form-control-sm"
+          :placeholder="'Needs Price'"
+          :disabled="disabled"
+        />
         <currency-input
+          v-else
           v-model.number="listing_discount"
           v-bind="{
             currency: 'USD',
@@ -42,7 +50,15 @@
     </td>
     <td>
       <label>
+        <percent-input
+          v-if="isPercentDiscount(bucket_discount_type)"
+          v-model="bucket_discount"
+          class="trim-bucket-discount-value form-control form-control-sm"
+          :placeholder="'Needs Price'"
+          :disabled="disabled"
+        />
         <currency-input
+          v-else
           v-model.number="bucket_discount"
           v-bind="{
             currency: 'USD',
@@ -81,9 +97,13 @@
 <script>
   import { exists } from '@/utilities'
   import _currency from 'currency.js'
+  import PercentInput from '@/components/PercentInput'
 
   export default {
     name: 'BidConfigTableTrim',
+    components: {
+      PercentInput
+    },
     props: {
       trim: Object,
       configuration: Object,
@@ -95,7 +115,12 @@
     data() {
       return {}
     },
-    inject: ['buildConfigObject', 'computeMinPrice', 'discountValuesConst'],
+    inject: [
+      'buildConfigObject',
+      'computeMinPrice',
+      'discountValuesConst',
+      'isPercentDiscount'
+    ],
     computed: {
       msrp_display() {
         return _currency(this.trim.msrp, { precision: 0 }).format(true)
