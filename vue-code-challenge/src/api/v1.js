@@ -26,5 +26,8 @@ export default {
   },
   async postBidConfigs(data) {
     return fetch('post', endpoint('bid/config/index'), data)
+  },
+  async updatePostBidConfigs(id, data) {
+    return fetch('put', endpoint(`bid/config/index/${id}`), data)
   }
 }

@@ -25,7 +25,8 @@ export default {
     try {
       commit(mutator.CLEAR_BID_CONFIG_ERRORS)
       updated.map(async config => {
-        await v1.postBidConfigs(config)
+        // Fix: Should update the existing items
+        await v1.updatePostBidConfigs(config.id, config)
       })
       dispatch(actor.GET_BID_CONFIGS)
     } catch (e) {
@@ -91,17 +92,19 @@ export default {
 
     // Create new object
     const newConfig = {
-      ...{
-        id: null,
-        style_id: null,
-        listing_discount: { ref: null, type: null, value: null },
-        bucket_discount: { ref: null, type: null, value: null }
-      },
+      // Fix: Not needed on update
+      // ...{
+      //   id: null,
+      //   style_id: null,
+      //   listing_discount: { ref: null, type: null, value: null },
+      //   bucket_discount: { ref: null, type: null, value: null }
+      // },
       ...config,
-      ...values,
-      ...{
-        id: Date.now()
-      }
+      ...values
+      // Fix: Not needed on update
+      // ...{
+      //   id: Date.now()
+      // }
     }
 
     const updatedConfigIndex = state.bidConfig.configurations.updated.indexOf(
