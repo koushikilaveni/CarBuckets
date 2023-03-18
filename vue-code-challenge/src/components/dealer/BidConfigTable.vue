@@ -14,20 +14,22 @@
           </th>
         </tr>
         <tr class="config-titles">
-          <th @click="sortBy('year')">
+          <!-- <th @click="sortBy('year')"> -->
+          <th>
             <div
               class="d-flex align-items-center justify-content-between text-center"
             >
               Year
-              {{ displayArrow('year') }}
+              <!-- {{ displayArrow('year') }} -->
             </div>
           </th>
-          <th @click="sortBy('model')">
+          <!-- <th @click="sortBy('model')"> -->
+          <th>
             <div
               class="d-flex align-items-center justify-content-between text-center"
             >
               &nbsp;Model
-              {{ displayArrow('model') }}
+              <!-- {{ displayArrow('model') }} -->
             </div>
           </th>
           <th class="text-center">MSRP</th>
@@ -190,19 +192,19 @@
           .map(trim => this.findConfiguration(trim.style_id))
           .filter(config => config !== undefined)
       },
-      sortBy(colName) {
-        if (colName === this.sortKey) {
-          this.sortDir = this.sortDir === 'asc' ? 'desc' : 'asc'
-        }
-        this.sortKey = colName
-      },
-      displayArrow(column) {
-        const columnIsSortKey = column === this.sortKey
-        const sortDirIsDesc = this.sortDir === 'desc'
+      // sortBy(colName) {
+      //   if (colName === this.sortKey) {
+      //     this.sortDir = this.sortDir === 'asc' ? 'desc' : 'asc'
+      //   }
+      //   this.sortKey = colName
+      // },
+      // displayArrow(column) {
+      //   const columnIsSortKey = column === this.sortKey
+      //   const sortDirIsDesc = this.sortDir === 'desc'
 
-        if (columnIsSortKey) return sortDirIsDesc ? '⬇' : '⬆'
-        return 'sort'
-      },
+      //   if (columnIsSortKey) return sortDirIsDesc ? '⬇' : '⬆'
+      //   return 'sort'
+      // },
       sortOptions(key, dir) {
         return this.options.concat().sort((a, b) => {
           let modifier = 1
