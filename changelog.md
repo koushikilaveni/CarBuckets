@@ -1,0 +1,4 @@
+- New: Added listings back  (This is a commented code, while going through it I understood it's just commented)
+- New: Add a % component, it's used to show the appropriate component based on discount type selected.
+- Fix: fixed the api to update the records correctly (changes in vuex store)
+- Remove: Removed sorting (I know it's useful feature, but couldn't think of anything that's not useful)
